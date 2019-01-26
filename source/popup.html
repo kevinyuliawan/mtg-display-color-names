@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <style>
+        button {
+          padding: 5px;
+          outline: none;
+        }
+        .filter-green{
+          filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(86deg) brightness(118%) contrast(119%);
+        }
+        .filter-red{
+          filter: invert(15%) sepia(99%) saturate(5409%) hue-rotate(358deg) brightness(101%) contrast(112%);
+        }
+      </style>
+    </head>
+    <body>
+      <button id="mtgGuildColorsToggle">
+         <img src="images/power.svg" height="20" width="20" id='mtgGuildColorsImg'></img>
+      </button>
+      <input type="hidden" id="mtgGuildColorsInput"> <!-- this input is solely for storing the current state -->
+      <script src="popup.js"></script>
+    </body>
+  </html>
