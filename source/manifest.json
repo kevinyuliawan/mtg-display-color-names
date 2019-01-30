@@ -4,7 +4,7 @@
   "version": "1.0",
   "description": "Chrome extension that appends the display of color combination names for associated Magic: The Gathering guilds/shards/wedges.",
   "icons": {"16": "icon16.png", "48": "icon48.png", "128": "icon128.png"},
-  "permissions": ["activeTab", "declarativeContent", "storage"],
+  "permissions": ["storage"],
   "background": {
       "scripts": ["background.js"],
       "persistent": false
