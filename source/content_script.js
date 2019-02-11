@@ -117,7 +117,7 @@ function convertColorToImage(color, fontSize){
 	for(let i=0;i<color.length;i++){
 		let cur = color[i];
 		let imgPath = chrome.runtime.getURL(`images/${cur}.svg`);
-		ret += `<img alt="${cur}" src="${imgPath}" width="${fontSize}" height="${fontSize}" id='mtg-guild-clan-extension' style='margin:0px;padding:0px;'></img>`; //inline styling to prevent parent site's CSS overriding it
+		ret += `<img alt="${cur}" src="${imgPath}" width="${fontSize}" height="${fontSize}" id='mtg-guild-clan-extension' style='margin:0px;padding:0px;vertical-align:initial;'></img>`; //inline styling to prevent parent site's CSS overriding it
 	}
 	return ret;
 }
