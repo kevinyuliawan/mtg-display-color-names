@@ -53,6 +53,21 @@ function walk(node){
 function handleText(textNode) {
 	let parentNode = textNode.parentNode;
 
+	// Only want to update the node if it's not contained within a 'contenteditable'
+	//  since this can cause issues with typing.
+	//  e.g. Reddit's editors, since those are <div>'s with 'contenteditable=true'
+	let notWithinContentEditable = true;
+	let contentEditables = document.querySelectorAll('[contenteditable="true"]');
+	if(contentEditables.length > 0){
+		for(let c=0;c<contentEditables.length;c++){
+			let contentEditable = contentEditables[c];
+			if(contentEditable.contains(textNode)){
+				notWithinContentEditable = false;
+				break;
+			}
+		}
+	}
+
 	// Only want to update the node if it contains the color we're searching for,
 	//  otherwise we hit an infinite loop due to MutationObserver.
 	// Use regex to add word boundaries when checking for color so that we dont find matches within other words e.g. ink.
@@ -70,7 +85,7 @@ function handleText(textNode) {
 
 	// Only update if we haven't already updated it, since otherwise we'd run into an infinite loop due to MutationObserver.
 	// 'mtg-guild-clan-extension' id in the img we add is a way to tell if we've already added it
-	if(containsColor && !parentNode.innerHTML.includes('mtg-guild-clan-extension')){
+	if(containsColor && notWithinContentEditable && !parentNode.innerHTML.includes('mtg-guild-clan-extension')){
 		//Make the images a little smaller than the actual font size for readability.
 		let fontSize = window.getComputedStyle(textNode.parentNode).getPropertyValue('font-size').slice(0,2);
 		fontSize = Number(fontSize) - 4; // TODO make relative fontSize customizable?
