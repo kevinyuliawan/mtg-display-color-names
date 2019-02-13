@@ -1,7 +1,9 @@
 MTG Display Color Names
 =============
 
-Chrome extension that appends the display of color combination names for associated Magic: The Gathering guilds/shards/wedges.
+Chrome extension that appends the display of colors to color names for associated Magic: The Gathering guilds/shards/wedges.
+
+Download here: https://chrome.google.com/webstore/detail/mtg-display-color-names/nngpmgkjlppmoadcjbabccppcbdeeobf
 
 Before:
 ![Before](https://i.imgur.com/TfD4zrF.png)
