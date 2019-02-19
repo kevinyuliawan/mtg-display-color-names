@@ -3,8 +3,8 @@ MTG Display Color Names
 
 Chrome extension that appends the display of colors to color names for associated Magic: The Gathering guilds/shards/wedges.
 
-Turn it on/off by clicking on the extension icon, then clicking on the power button. This requires a refresh of the
-current page you're on.
+Turn it on/off globally by clicking on the extension icon, then clicking on the power button.
+This requires a refresh of the currently open pages to take effect.
 
 ![Power](https://i.imgur.com/zhPIye3.png)
 
