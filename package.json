@@ -1,0 +1,19 @@
+{
+  "name": "mtg-display-color-names",
+  "private": true,
+  "version": "1.0.2",
+  "description": "MTG Display Color Names =============",
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kevinyuliawan/mtg-display-color-names.git"
+  },
+  "keywords": ["mtg"],
+  "author": "Kevin Yuliawan <kevin.yuliawan@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kevinyuliawan/mtg-display-color-names/issues"
+  },
+  "homepage": "https://github.com/kevinyuliawan/mtg-display-color-names#readme"
+}
