@@ -77,7 +77,7 @@ function handleText(textNode) {
 		let curColor = colors[i];
 		let re = `\\b(${curColor})\\b`; //need to double-escape the \b
 		let regex = new RegExp(re, 'gi');
-		if(disabledNames().indexOf(curColor) == -1 && regex.test(textNode.nodeValue.toLowerCase())){
+		if(disabledNames().indexOf(curColor) === -1 && regex.test(textNode.nodeValue.toLowerCase())){
 			containsColor = true;
 			break;
 		}
@@ -99,7 +99,7 @@ function appendColorsToName(text, fontSize){
 	colorNames().forEach((name, index, enumerable) => {
 		let re = `\\b(${name})\\b`; //need to double-escape the \b
 		let regex = new RegExp(re, 'gi'); //case-insensitive so we don't need to change capitalization
-		if(text && disabledNames().indexOf(name) == -1){
+		if(text && disabledNames().indexOf(name) === -1){
 			text = text.replace(regex, `$1 ${getColorsFromName(name, fontSize)}`);
 		}
 	});
