@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
   toggleButton.onclick = function(element) {
     let input = document.getElementById('mtgGuildColorsInput');
-    let currentState = input.value == 'true' || input.value == true ? true : false;
+    let currentState = input.value === 'true' || input.value === true;
     console.log('Current state is: ', currentState);
 
     let newState = !currentState;
