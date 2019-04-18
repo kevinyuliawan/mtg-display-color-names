@@ -4,16 +4,26 @@
   "version": "1.0.2",
   "description": "MTG Display Color Names =============",
   "scripts": {
+    "build:background": "browserify src/background.js > package/background.js",
+    "build:content_script": "browserify src/content_script.js > package/content_script.js",
+    "build:popup": "browserify src/popup.js > package/popup.js",
+    "build": "npm-run-all --parallel build:*"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/kevinyuliawan/mtg-display-color-names.git"
   },
-  "keywords": ["mtg"],
+  "keywords": [
+    "mtg"
+  ],
   "author": "Kevin Yuliawan <kevin.yuliawan@gmail.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/kevinyuliawan/mtg-display-color-names/issues"
   },
-  "homepage": "https://github.com/kevinyuliawan/mtg-display-color-names#readme"
+  "homepage": "https://github.com/kevinyuliawan/mtg-display-color-names#readme",
+  "devDependencies": {
+    "browserify": "^16.2.3",
+    "npm-run-all": "^4.1.5"
+  }
 }
