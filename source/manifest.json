@@ -13,6 +13,7 @@
   [
     {
       "matches": ["*://*/*"],
+      "exclude_matches": ["*://twitter.com/*"],
       "js": ["content_script.js"],
       "all_frames": true
     }

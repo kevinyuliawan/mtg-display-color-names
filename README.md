@@ -35,4 +35,5 @@ TODO
 - Add option to display the guild symbol
 - Option for customizing font size (to be +/- x from the amount it's currently subtracting from aka 4)
 - Add option to only replace the first one on the page? That way it's more of a reminder of what color it is
+- Fix + re-enable on Twitter
 

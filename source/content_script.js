@@ -84,7 +84,7 @@ function handleText(textNode) {
 	}
 
 	// Only update if we haven't already updated it, since otherwise we'd run into an infinite loop due to MutationObserver.
-	// 'mtg-guild-clan-extension' id in the img we add is a way to tell if we've already added it
+	// 'mtg-guild-clan-extension' class in the img we add is a way to tell if we've already added it
 	if(containsColor && notWithinContentEditable && !parentNode.innerHTML.includes('mtg-guild-clan-extension')){
 		//Make the images a little smaller than the actual font size for readability.
 		let fontSize = window.getComputedStyle(textNode.parentNode).getPropertyValue('font-size').slice(0,2);
@@ -117,14 +117,14 @@ function convertColorToImage(color, fontSize){
 	for(let i=0;i<color.length;i++){
 		let cur = color[i];
 		let imgPath = chrome.runtime.getURL(`images/${cur}.svg`);
-		ret += `<img alt="${cur}" src="${imgPath}" width="${fontSize}" height="${fontSize}" id='mtg-guild-clan-extension' style='margin:0px;padding:0px;vertical-align:initial;'></img>`; //inline styling to prevent parent site's CSS overriding it
+		ret += `<img alt="${cur}" src="${imgPath}" width="${fontSize}" height="${fontSize}" class='mtg-guild-clan-extension' style='margin:0px;padding:0px;vertical-align:initial;'></img>`; //inline styling to prevent parent site's CSS overriding it
 	}
 	return ret;
 }
 
 function colorNames(){
 	return [
-	  'azorius', 'boros', 'dimir', 'golgari', 'gruul', 'izzet', 'orzhov', 'rakdos', 'selesnya', 'simic',
+	  'azorius', 'azorious', 'boros', 'dimir', 'golgari', 'gruul', 'izzet', 'orzhov', 'rakdos', 'selesnya', 'simic',
 	  'abzan', 'bant', 'esper', 'grixis', 'jeskai', 'jund', 'mardu', 'naya', 'sultai', 'temur',
 	  'glint', 'dune', 'ink', 'witch', 'yore'
 	]; //Show guild symbol?
