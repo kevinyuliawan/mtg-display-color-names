@@ -25,8 +25,28 @@ Credits for icons:
 Color combinations as according to:
 - https://mtg.gamepedia.com/Multicolor
 
+Development
+-----------
 
+Development is done using [npm](https://www.npmjs.com/) and [browserify](https://www.npmjs.com/package/browserify).
 
+First, install [Node and npm](https://nodejs.org/en/). If you use [Node versin manager](https://github.com/creationix/nvm), there is an `.nvmrc` to use a specific version of Node/npm.
+
+Next, install the dependencies for the project:
+
+```bash
+npm install
+```
+
+Make changes to any of the JavaScript files in the `src` directory, and then run the build script:
+
+```
+npm run build
+``
+
+This will build the files and copy them to the package directory, which can be packed and uploaded as a Chrome Extension.
+
+See [Chrome's instructions for developing a Chrome extension](https://developer.chrome.com/extensions/getstarted) for details on how to load the package folder as an unpacked extension.
 
 TODO
 ---
