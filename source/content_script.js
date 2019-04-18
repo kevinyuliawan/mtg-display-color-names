@@ -131,7 +131,7 @@ function colorNames(){
 }
 
 function disabledNames(){ //disable these names since these are common words
-	return ['ink', 'witch'];
+	return ['ink', 'witch', 'dune'];
 }
 
 function nameToColorMap(){
